@@ -18,10 +18,11 @@ data = json.load(pokedex)
     if language=="french":
         print(pokemon["name"]["french"]) """
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
-type=input("What type of pokemon?(Steel, grass, poison, fire, flying, water, bug, normal, electric, ground, fighting, psychic, rock, steel, ice, ghost, fairy, dragon, dark)")
+type=input("What type of pokemon?(Steel, Grass, Poison, Fire, Flying, Water, Bug, Normal, Electric, Ground, Fighting, Psychic, Rock, Steel, Ice, Ghost, Fairy, Dragon, Dark):")
 for pokemon in data:
-    if pokemon==input:
-        print(input(type))
+    for stuff in pokemon['type']:
+        if stuff == type:
+            print(pokemon["name"])
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 
 
